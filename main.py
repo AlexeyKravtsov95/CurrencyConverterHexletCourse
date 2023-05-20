@@ -10,12 +10,14 @@ print("""
 - Выбор валюты для конвертации
 """)
 
-print("Вам предложены следующие валюты:")
-key_counter = 0
-for key, value in CURRENCIES.items():
-    key_counter += 1
-    print(f'{key_counter}. {key}')
+def print_exists_currencies():
+    print("Вам предложены следующие валюты:")
+    key_counter = 0
+    for key, value in CURRENCIES.items():
+        key_counter += 1
+        print(f'{key_counter}. {key}')
 
+print_exists_currencies()
 
 def input_currency():
     while True:
