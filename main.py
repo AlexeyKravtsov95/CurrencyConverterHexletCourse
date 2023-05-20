@@ -54,7 +54,7 @@ def choose_conversion_currency():
 conversion_currency = choose_conversion_currency()
 
 def calculated_amount(current_amount, user_currency, conversion_currency):
-    converted_amount = current_amount * CURRENCIES.get(user_currency) / CURRENCIES.get(conversion_currency)
+    converted_amount = current_amount / CURRENCIES.get(user_currency) * CURRENCIES.get(conversion_currency)
     print(f"Итого: {round(converted_amount, 2)} {conversion_currency}")
 
 calculated_amount(current_amount, user_currency, conversion_currency)
